@@ -11,6 +11,12 @@
   justify-content: space-between;
 }
 
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body{
   font: 300 18px / 1.6em 'Roboto', 'Arial', sans-serif;
   color: #7c8ca0;
@@ -42,6 +48,7 @@ body{
 a{
   text-decoration: none;
   color: #5d6981;
+  font-size: 22px;
 }
 img{
   max-width: 100%;
@@ -77,6 +84,10 @@ img{
   }
 }
 
+.intro-section{
+  background-image: linear-gradient(to top, #edeff1 0%, #edeff1 1%, #ffffff 24%, #e2e4e8 31%, #ffffff 100%);
+}
+
 .header{
   display: block;
   text-align: center;
@@ -84,7 +95,6 @@ img{
   
   &__title{
     line-height: 48px;
-    /* Text style for "C, heck ou" */
     color: #0149a1;
     font-size: 72px;
     font-weight: 700;
@@ -92,26 +102,60 @@ img{
   &__paragraph{
     font-size: 36px;
     font-weight: 300;
+    margin-top: 5px;
   }
 }
 
 .intro-cta{
-  margin-top: 110px;
+  margin: 110px 0 115px;
   text-align: center;
+}
+.intro__video{
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
+  background: url(../img/chat.png)no-repeat left 55px, url(../img/bulb.png)no-repeat right 55px;
+  position: relative;
+}
+
+.intro__video--image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1094px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro__video--image > .btn{
+  position: absolute;
+  margin-top: -60px;
 }
 
 .btn {
   width: 240px;
   height: 60px;
   border-radius: 30px;
-  background-color: #ff2d55;
+  background-color: #fff;
+  color: #0149a1;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 20px 70px;
   &--primary{
     padding: 22px 70px;
     color: #ffffff;
+    background-color: #ff2d55;
     font-weight: 700;
     line-height: 48px;
   }
+  &--default{
+    width: 134px;
+    height: 60px;
+    padding: 20px 30px 20px;
+    
+  }
 }
+
 
 
 
