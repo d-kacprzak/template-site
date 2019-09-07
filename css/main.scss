@@ -116,15 +116,22 @@ img{
   margin: 0 auto;
   background: url(../img/chat.png)no-repeat left 55px, url(../img/bulb.png)no-repeat right 55px;
   position: relative;
+  &--image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1094px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
-.intro__video--image{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1094px;
-  width: 100%;
-  margin: 0 auto;
+.triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10.5px 0 10.5px 17px;
+  border-color: transparent transparent transparent #007bff;
 }
 
 .intro__video--image > .btn{
@@ -138,7 +145,7 @@ img{
   border-radius: 30px;
   background-color: #fff;
   color: #0149a1;
-  font-size: 18px;
+  font-size: 1em;
   line-height: 1.2em;
   padding: 20px 70px;
   &--primary{
@@ -149,38 +156,76 @@ img{
     line-height: 48px;
   }
   &--default{
+    @include flex();
     width: 134px;
     height: 60px;
     padding: 20px 30px 20px;
-    
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ul > .footer__items{
-  text-decoration: none;
+.feature-boxes__container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: 100px 100px 150px;
+  grid-column-gap: 50px;
 }
+div.feature-boxes__item {
+  & > h3{
+    color: #5d6981;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.6em;
+    margin: 20px 0;
+  }
+  & > p {
+    color: #7c8ca0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7em;
+  }
+}
+h3 .feature-boxes__header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.feature-boxes__container > .feature-boxes__item{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul > li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
 
 .container__footer{
   max-width: 970px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
 }
