@@ -5,6 +5,138 @@
   padding: 0;
 }
 
+/* mixin */
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+body{
+  font: 300 18px / 1.6em 'Roboto', 'Arial', sans-serif;
+  color: #7c8ca0;
+}
+/* Page header */
+.page-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px solid #e4e6ea;
+}
+
+.page-header > .container {
+  @include flex();
+}
+
 .page-section{
   margin-top: 20px;
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Menu */
+a{
+  text-decoration: none;
+  color: #5d6981;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu{
+  @include flex();
+  
+  &__item{
+    padding: 15px 25px;
+  }
+  
+  list-style-type: none;
+  & li{
+    margin: 0 4px;
+  }
+  &__item {
+    &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &.active{
+      border-radius: 36px;
+      border: 1px solid #9fabba;
+    }
+  }
+}
+
+.header{
+  display: block;
+  text-align: center;
+  margin-top: 140px;
+  
+  &__title{
+    line-height: 48px;
+    /* Text style for "C, heck ou" */
+    color: #0149a1;
+    font-size: 72px;
+    font-weight: 700;
+  }
+  &__paragraph{
+    font-size: 36px;
+    font-weight: 300;
+  }
+}
+
+.intro-cta{
+  margin-top: 110px;
+  text-align: center;
+}
+
+.btn {
+  width: 240px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #ff2d55;
+  &--primary{
+    padding: 22px 70px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 48px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul > .footer__items{
+  text-decoration: none;
+}
+
+.container__footer{
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
 }
